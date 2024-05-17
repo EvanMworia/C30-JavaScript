@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Streak Tracker</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Streak Tracker</h1>
+            <h4><i>This is your daily reminder to stay clean my G</i></h4>
+            <div class="input-form">
+                <input
+                    type="text"
+                    id="habit"
+                    placeholder="Enter a habit to track"
+                />
+                <input type="date" id="date" />
+                <button onclick="addHabit()" id="btn">Add Habit</button>
+            </div>
+            <div class="habits-list">
+                <h2>Tracked Habits</h2>
+                <ul id="habits">
+                    <!-- Habit items will be appended here -->
+                </ul>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
