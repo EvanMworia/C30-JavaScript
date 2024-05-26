@@ -82,6 +82,8 @@ async function displaySingleUserPosts() {
     let htmlToBeRendered = '';
     const uid = captureSelectedDropdownValue();
     const users = await getUsers();
+    const tweepName = users.find((user) => user.id == uid);
+
     const allPosts = await getPosts();
     const postsBySingleUser = allPosts.filter(
         (post) => post.userId == Number(uid)
@@ -92,12 +94,10 @@ async function displaySingleUserPosts() {
                 <div class="profile-picture-small"></div>
                 <div class="tweet-content">
                     <div class="tweet-header">
-                        <span class="tweet-name">${users.find((user) => {
-                            if (user.id == uid) return user.name;
-                        })}</span>
-                        <span class="tweet-username">@${users.find((user) => {
-                            if (user.id == uid) return user.username;
-                        })}</span>
+                        <span class="tweet-name">${tweepName.name}</span>
+                        <span class="tweet-username">@${
+                            tweepName.username
+                        }</span>
                         <span class="tweet-time">${timeGenerator()}h</span>
                     </div>
                     <div class="tweet-text">
