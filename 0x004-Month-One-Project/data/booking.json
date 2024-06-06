@@ -1,0 +1,25 @@
+{
+    "booking": [
+        {
+            "user": {
+                "userId": "",
+                "userName": "",
+                "email": ""
+            },
+            "tour": {
+                "tourId": "",
+                "name": "",
+                "destination": "",
+                "description": "",
+                "price": 0
+            },
+            "hotel": {
+                "hotelId": "",
+                "name": "",
+                "location": "",
+                "rating": ""
+            },
+            "date": ""
+        }
+    ]
+}

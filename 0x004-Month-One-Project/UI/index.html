@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tour Booking System</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Tour Booking System</h1>
+            </header>
+
+            <section>
+                <h2>Manage Tours</h2>
+                <form id="tourForm">
+                    <input type="text" id="tourName" placeholder="Tour Name" required />
+                    <input type="text" id="tourDestination" placeholder="Destination" required />
+                    <textarea id="tourDescription" placeholder="Description" required></textarea>
+                    <input type="number" id="tourPrice" placeholder="Price" required />
+                    <button type="submit">Add Tour</button>
+                </form>
+                <table id="tourTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Destination</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Tour data will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Manage Hotels</h2>
+                <form id="hotelForm">
+                    <input type="text" id="hotelName" placeholder="Hotel Name" required />
+                    <input type="text" id="hotelLocation" placeholder="Location" required />
+                    <input type="number" id="hotelRating" placeholder="Star Rating" required />
+                    <button type="submit">Add Hotel</button>
+                </form>
+                <table id="hotelTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Location</th>
+                            <th>Rating</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Hotel data will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h2>Manage Bookings</h2>
+                <form id="bookingForm">
+                    <input type="text" id="userName" placeholder="User Name" required />
+                    <input type="text" id="tourNameBooking" placeholder="Tour Name" required />
+                    <input type="text" id="hotelNameBooking" placeholder="Hotel Name" required />
+                    <input type="date" id="bookingDate" required />
+                    <button type="submit">Add Booking</button>
+                </form>
+                <table id="bookingTable">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Tour</th>
+                            <th>Hotel</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Booking data will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <script src="../app.ts"></script>
+    </body>
+</html>
