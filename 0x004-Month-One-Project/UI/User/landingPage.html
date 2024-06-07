@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tour Booking System</title>
+        <link rel="stylesheet" href="userStyles.css" />
+    </head>
+    <body>
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Tour Booking</h1>
+                <p>Explore amazing tours and book your adventure today!</p>
+                <div class="hero-buttons">
+                    <button class="hero-button" id="loginButton">Login</button>
+                    <button class="hero-button" id="signupButton">Sign Up</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content Area -->
+        <main class="container">
+            <h2>Available Tours</h2>
+            <div id="tourCards" class="card-container">
+                <!-- Tour cards will be dynamically populated here -->
+                <div class="tour-card">
+                    <h1>Tour example</h1>
+                    <p><i>This is a tour deatil</i></p>
+                    <button>Click me</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Tour Details Modal -->
+        <div id="tourDetailsModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="tourName"></h2>
+                <p id="tourDestination"></p>
+                <p id="tourDescription"></p>
+                <p id="tourPrice"></p>
+                <button id="bookButton" class="btn">Book Now</button>
+            </div>
+        </div>
+
+        <!-- Booking Form Modal -->
+        <div id="bookingFormModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Booking Details</h2>
+                <form id="bookingForm">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" name="userName" required />
+                    <label for="bookingDate">Date:</label>
+                    <input type="date" id="bookingDate" name="bookingDate" required />
+                    <button type="submit" class="btn">Submit Booking</button>
+                </form>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
