@@ -1,0 +1,17 @@
+CREATE FUNCTION CalculateAge (@DOB DATE)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @Age INT;
+
+    
+    SET @Age = DATEDIFF(YEAR, @DOB, GETDATE());
+
+    
+    IF MONTH(@DOB) > MONTH(GETDATE()) OR (MONTH(@DOB) = MONTH(GETDATE()) AND DAY(@DOB) > DAY(GETDATE()))
+    BEGIN
+        SET @Age = @Age - 1;
+    END
+
+    RETURN @Age;
+END;
