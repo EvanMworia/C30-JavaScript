@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="admin-style.css" />
+        <script src="admin.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <section>
+                <h2>Manage Tours</h2>
+                <form id="tourForm">
+                    <input type="text" id="tourName" placeholder="Tour Name" required />
+                    <input type="text" id="tourDestination" placeholder="Destination" required />
+                    <textarea id="tourDescription" placeholder="Description" required></textarea>
+                    <input type="number" id="tourPrice" placeholder="Price" required />
+                    <button type="submit" id="tourSubmit">Add Tour</button>
+                </form>
+                <a href="admin-home.html"><button class="back">BACK TO HOME</button></a>
+                <table id="tourTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Destination</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Tour data will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </body>
+</html>

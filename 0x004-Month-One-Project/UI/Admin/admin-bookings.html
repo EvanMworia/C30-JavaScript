@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="admin-style.css" />
+        <script src="admin.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <section>
+                <h2>Manage Bookings</h2>
+                <form id="bookingForm">
+                    <input type="text" id="userName" placeholder="User Name" required />
+                    <input type="text" id="tourNameBooking" placeholder="Tour Name" required />
+                    <input type="text" id="hotelNameBooking" placeholder="Hotel Name" required />
+                    <input type="date" id="bookingDate" required />
+                    <button type="submit">Add Booking</button>
+                </form>
+                <a href="admin-home.html"><button class="back">BACK TO HOME</button></a>
+                <table id="bookingTable">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Tour</th>
+                            <th>Hotel</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Booking data will be dynamically added here -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </body>
+</html>
