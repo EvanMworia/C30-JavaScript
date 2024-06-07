@@ -1,7 +1,7 @@
 import { ItourDTO, ItourStructure, TourDTO } from '../models/tourModel';
 
 export class TourService {
-    private readonly url = '';
+    private readonly url = 'http://localhost:3001/tour/';
 
     //addNewTour
     async createTour(tourDetails: ItourDTO): Promise<ItourStructure> {

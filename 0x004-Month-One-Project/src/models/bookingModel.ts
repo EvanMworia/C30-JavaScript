@@ -16,3 +16,31 @@ export interface IbookingDTO {
     hotel: IhotelStructure;
     bookingDate: Date;
 }
+
+export class BookingDTO implements IbookingDTO {
+    user: IuserStructure;
+    tour: ItourStructure;
+    hotel: IhotelStructure;
+    bookingDate: Date;
+    constructor(user: IuserStructure, tour: ItourStructure, hotel: IhotelStructure, bookingDate: Date) {
+        this.user = user;
+        this.tour = tour;
+        this.hotel = hotel;
+        this.bookingDate = bookingDate;
+    }
+}
+
+export class BookingStructure implements IbookingStructure {
+    id: string;
+    user: IuserStructure;
+    tour: ItourStructure;
+    hotel: IhotelStructure;
+    bookingDate: Date;
+    constructor(id: string, user: IuserStructure, tour: ItourStructure, hotel: IhotelStructure, bookingDate: Date) {
+        this.id = id;
+        this.user = user;
+        this.tour = tour;
+        this.hotel = hotel;
+        this.bookingDate = bookingDate;
+    }
+}

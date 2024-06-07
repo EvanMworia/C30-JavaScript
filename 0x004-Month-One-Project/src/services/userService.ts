@@ -1,7 +1,7 @@
 import { IuserDTO, IuserStructure, UserDTO } from '../models/userModels';
 
 export class UserService {
-    private readonly url = 'http://localhost:3000/user/';
+    private readonly url = 'http://localhost:3002/user/';
 
     //----CREATING-----
     async addNewUser(user: IuserDTO): Promise<IuserStructure> {
