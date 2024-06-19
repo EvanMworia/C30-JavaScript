@@ -1,6 +1,6 @@
 USE Inventory
 GO
-CREATE OR ALTER PROCEDURE updateProduct(@Id VARCHAR(255), @CategoryId VARCHAR(255), @Name VARCHAR(255))
+CREATE OR ALTER PROCEDURE updateProduct( @CategoryId VARCHAR(255), @Name VARCHAR(255))
 AS
 BEGIN
 UPDATE Products SET Name=@Name WHERE Id=@Id

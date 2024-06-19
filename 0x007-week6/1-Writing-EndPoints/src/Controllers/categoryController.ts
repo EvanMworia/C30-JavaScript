@@ -68,3 +68,18 @@ export const deleteCategory = async (_request: Request<{ id: string }>, _respons
         _response.status(500).json(error);
     }
 };
+
+export const getCategoryNameFromId = async (Id: string) => {
+    try {
+        const pool = await mssql.connect(sqlConfig);
+        const foundCategory = (await (
+            await pool.request().input('Id', Id).execute('getCategoryById')
+        ).recordset[0]) as ICategory;
+        if (foundCategory && foundCategory.Id) {
+            return foundCategory;
+        }
+        throw new Error('No category has been found assocaited with the id you provided');
+    } catch (error) {
+        console.error(error);
+    }
+};
